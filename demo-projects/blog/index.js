@@ -13,6 +13,7 @@ const { User, Post, PostCategory, Comment } = require('./schema');
 const keystone = new Keystone({
   name: 'Keystone Demo Blog',
   adapter: new MongooseAdapter(),
+  secureCookies: false,
   onConnect: async () => {
     // Initialise some data.
     // NOTE: This is only for demo purposes and should not be used in production
